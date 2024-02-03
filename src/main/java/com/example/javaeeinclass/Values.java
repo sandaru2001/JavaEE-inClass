@@ -10,11 +10,6 @@ import java.io.IOException;
 public class Values extends HttpServlet {
 
     @Override
-    public void init() throws ServletException {
-        System.out.println("customAPI");
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
         if (req.getContentType() == null || !req.getContentType().toLowerCase().startsWith("application/json")) {
